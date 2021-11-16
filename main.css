@@ -1,0 +1,150 @@
+body {
+  height:100vh;
+  width:100vw;
+  background: radial-gradient(at center, #a2d2ff, #B983FF);
+}
+
+.nn-div {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 60px;
+  row-gap: 2em;
+}
+
+svg {
+  height: 358px;
+  width: 100%;
+  position: relative;
+  left: -170px;
+}
+
+.connection {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.animate-connection {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+
+  animation: connectAnim 2s ease-in infinite;
+}
+
+.circle-stroke {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.circle-blue {
+  fill: #bde0fe;
+}
+
+.circle-purple {
+  fill: #ffc8dd;
+}
+
+.circle-pink {
+  fill: #ff8fa3;
+}
+
+.animate-circle {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 160;
+  }
+}
+
+@keyframes connectAnim {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 120;
+  }
+}
+
+.button {
+  justify-self: center;
+  transition: all 0.5s;
+  border-radius: 20px;
+  background-color: #f15bb5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: bold;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  width: 30%;
+  animation: spin 1s 3 ease-out 2s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.button:hover {
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.opacity-1 {
+  display: static;
+}
+
+.opacity-0 {
+  display: none;
+}
