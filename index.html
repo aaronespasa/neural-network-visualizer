@@ -1,0 +1,56 @@
+<head>
+    <title>NN Visualizer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="nn-div">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.19 231.82">
+
+            <!-- Layer 1 -->
+            <circle class="circle-stroke circle-blue layer1 animate-circle" cx="26.68" cy="77.04" r="25.18" />
+            <circle class="circle-stroke circle-blue layer1 animate-circle" cx="26.68" cy="145.88" r="25.18" />
+
+            <!-- Connections: Layer1 -> Layer2 -->
+            <line class="connection layer12 animate-connection" x2="47.57" y2="62.98" x1="112.33" y1="34.61" />
+            <line class="connection layer12 animate-connection" x2="49.84" y2="86.92" x1="112.33" y1="110.15" />
+            <line class="connection layer12 animate-connection" x1="114.96" y1="193.94" x2="39.79" y2="98.54" />
+            <line class="connection layer12 animate-connection" x2="47.57" y2="131.82" x1="120.86" y1="45.56" />
+            <line class="connection layer12 animate-connection" x2="51.86" y2="145.88" x1="112.33" y1="120.7" />
+            <line class="connection layer12 animate-connection" x2="46.22" y2="161.76" x1="112.33" y1="205.14" />
+
+            <!-- Layer 2 -->
+            <circle class="circle-purple layer2" cx="137.51" cy="26.68" r="25.18" />
+            <circle class="circle-purple layer2" cx="137.51" cy="115.91" r="25.18" />
+            <circle class="circle-purple layer2" cx="137.51" cy="205.14" r="25.18" />
+
+            <!-- Connections: Layer2 -> Layer3 -->
+            <line class="connection layer23" x2="162.69" y2="26.68" x1="223.16" y1="26.68" />
+            <line class="connection layer23" x2="161.41" y2="34.61" x1="230.12" y1="98.54" />
+            <line class="connection layer23" x2="149.56" y2="48.79" x1="232.78" y1="185.35" />
+            <line class="connection layer23" x2="155.72" y2="98.54" x1="226.37" y1="38.99" />
+            <line class="connection layer23" x2="162.23" y2="120.7" x1="223.62" y1="120.7" />
+            <line class="connection layer23" x2="152.37" y2="136.24" x1="223.62" y1="200.35" />
+            <line class="connection layer23" x2="158.51" y2="191.25" x1="232.78" y1="46.47" />
+            <line class="connection layer23" x2="162.69" y2="205.14" x1="230.12" y1="133.28" />
+            <line class="connection layer23" x2="160.22" y2="216.03" x1="224.58" y1="213.48" />
+
+            <!-- Layer 3 -->
+            <circle class="circle-purple layer3" cx="248.34" cy="26.68" r="25.18" />
+            <circle class="circle-purple layer3" cx="248.34" cy="115.91" r="25.18" />
+            <circle class="circle-purple layer3" cx="248.34" cy="205.14" r="25.18" />
+
+            <!-- Connections: Layer3 -> Layer4 -->
+            <line class="connection layer34" x2="273.51" y2="26.68" x1="340.95" y1="98.54" />
+            <line class="connection layer34" x2="273.51" y2="115.91" x1="333.98" y1="115.91" />
+            <line class="connection layer34" x2="273.51" y2="205.14" x1="340.95" y1="133.29" />
+
+            <!-- Layer 4  -->
+            <circle class="circle-pink layer4" cx="359.16" cy="115.91" r="25.18" />
+
+        </svg>
+
+        <button class="button"><span>Change Layer</span></button>
+    </div>
+    <script src="nn-anim.js"></script>
+    <script src="background-anim.js"></script>
+<body>
